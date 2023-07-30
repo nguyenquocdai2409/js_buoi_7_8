@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes&amp;display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-group">
+            <label for="">Nhập số</label>
+            <input type="text" class="form-control" name="" id="number" placeholder="">
+        </div>
+        <button class="btn btn-danger" onclick="themSo()">Thêm số</button>
+        <div class="p-4 mt-4  bg-info text-white" id="resultMang"></div>
+
+        <div class="question">
+            <p class="mt-4">Tính tổng số dương</p>
+            <button id="tinh-tong" class="btn btn-primary" onclick="tinhTong()">Tính</button>
+            <div class="p-4 mt-4  bg-info text-white" id="resultTong"></div>
+        </div>
+        <div class="question">
+            <p class="mt-4">Đếm số dương</p>
+            <button id="tinh-tong" class="btn btn-primary" onclick="demSoDuong()">Đếm</button>
+            <div class="p-4 mt-4  bg-info text-white" id="resultDemSoDuong"></div>
+        </div>
+        <div class="question mb-5">
+            <p class="mt-4">Tìm số nhỏ nhất</p>
+            <button id="tinh-tong" class="btn btn-primary" onclick="timSoNhoNhat()">Tìm</button>
+            <div class="p-4 mt-4  bg-info text-white" id="resultSoNhoNhat"></div>
+        </div>
+        <div class="question mb-5">
+            <p class="mt-4">Tìm số dương nhỏ nhất</p>
+            <button id="tinh-tong" class="btn btn-primary" onclick="timSoDuongNhoNhat()">Tìm</button>
+            <div class="p-4 mt-4  bg-info text-white" id="resultSoDuongNhoNhat"></div>
+        </div>
+        <div class="question mb-5">
+            <p class="mt-4">Tìm số chẵn cuối cùng</p>
+            <button id="tinh-tong" class="btn btn-primary" onclick="timSoChanCuoiCung()">Tìm</button>
+            <div class="p-4 mt-4  bg-info text-white" id="resultSoChanCuoiCung"></div>
+        </div>
+        <div class="question mb-5">
+            <p class="mt-4">Đổi phần tử trong mảng</p>
+            <div class="form-group">
+                <label for="">Nhập số thứ 1</label>
+                <input type="text" class="form-control" name="" id="index1" placeholder="">
+            </div>
+            <div class="form-group">
+                <label for="">Nhập số thứ 2</label>
+                <input type="text" class="form-control" name="" id="index2" placeholder="">
+            </div>
+            <button id="tinh-tong" class="btn btn-primary" onclick="doiPhanTuTrongMang()">Đổi</button>
+            <div class="p-4 mt-4  bg-info text-white" id="resultKetQuaSauKhiDoi"></div>
+        </div>
+        <div class="question mb-5">
+            <p class="mt-4">Sắp xếp tăng dần</p>
+            <button id="tinh-tong" class="btn btn-primary" onclick="sapXepTangDan()">Tăng dần</button>
+            <div class="p-4 mt-4  bg-info text-white" id="resultSapXepTangDan"></div>
+        </div>
+        <div class="question mb-5">
+            <p class="mt-4">Số nguyên tố đầu tiên trong mảng</p>
+            <button id="tinh-tong" class="btn btn-primary" onclick="soNguyenToDauTien()">Tìm</button>
+            <div class="p-4 mt-4  bg-info text-white" id="resultSoNguyenToDauTien"></div>
+        </div>
+        <div class="question mb-5">
+            <p class="mt-4">Đếm số nguyên trong mảng</p>
+            <button id="tinh-tong" class="btn btn-primary" onclick="soNguyenTrongMang()">Đếm</button>
+            <div class="p-4 mt-4  bg-info text-white" id="resultTongSoNguyenTrongMang"></div>
+        </div>
+        <div class="question mb-5">
+            <p class="mt-4">So Sánh Số âm, Số Dương</p>
+            <button id="tinh-tong" class="btn btn-primary" onclick="soSanhSoAmDuong()">So sánh</button>
+            <div class="p-4 mt-4  bg-info text-white" id="resultSoSanhSoAmDuong"></div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="./index.js"></script>
+</body>
+
+</html>
